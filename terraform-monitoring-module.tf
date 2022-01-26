@@ -1,5 +1,5 @@
 module "monitoring_instance" {
-  source = "git@github.ibm.com:edeavil/monitoring-test-ver1.git"
+  source = "git@github.ibm.com:slz-v2-poc/monitoring.git"
   version = "1.0.0"
 
   resource_group = var.resource_group
