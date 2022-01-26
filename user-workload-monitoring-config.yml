@@ -1,0 +1,14 @@
+prometheus:
+      retention: 1y
+      volumeClaimTemplate:
+        spec:
+          storageClassName: ibmc-vpc-block-retain-general-purpose
+          volumeMode: Filesystem
+          resources:
+            requests:
+              storage: 100Gi
+      tolerations:
+      - key: "logging-monitoring"
+        operator: "Equal"
+        value: "node"
+        effect: "NoExecute"
